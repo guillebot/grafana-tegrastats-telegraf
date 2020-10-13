@@ -32,14 +32,18 @@ CUSTOM_LOGS %{NUMBER:ramused:int}/%{NUMBER:ramtotal:int}MB \(lfb %{NUMBER:pages:
 '''
 ```
 
-### Then you can of course graph them, put alarms, etc as usual.
+### Then you can of course graph them, set alarms, etc. as usual.
+
+
 
 
 ## Notes:
 
 I didn't know [grok](https://code.google.com/archive/p/semicomplete/wikis/Grok.wiki), which is a nice line-parser a la regex.
 Here a couple of tools that I used to assemble the custom pattern:
+
 https://grokdebug.herokuapp.com/
+
 http://grokconstructor.appspot.com/do/match#result
 
 
