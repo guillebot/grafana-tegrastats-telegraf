@@ -1,18 +1,18 @@
 # grafana-tegrastats-telegraf
 
-I'm using the nvidia jetson xavier platform.
+I'm developing a series of AI devices Nvidia Jetson based.
 
-In order to remote monitor it I use [influxdb](https://www.influxdata.com). I send the metrics using Telegraf, and visualize them using Grafana.
+In order to remote monitor them I use [influxdb](https://www.influxdata.com). I send the metrics using Telegraf, and visualize them using Grafana.
 
-For the most part I use [This beautiful](https://grafana.com/grafana/dashboards/8003) dashboard, but for the more specific parts like temperature monitoring, GPU, encoders, etc. I'm going with the nvidia tool [tegrastat](https://docs.nvidia.com/jetson/archives/l4t-archived/l4t-3231/index.html#page/Tegra%20Linux%20Driver%20Package%20Development%20Guide/AppendixTegraStats.html)
+For the most part I use [This beautiful](https://grafana.com/grafana/dashboards/8003) dashboard, but for the more specific parts like temperature, GPU, hardware encoders, etc. I'm going with the nvidia tool [tegrastat](https://docs.nvidia.com/jetson/archives/l4t-archived/l4t-3231/index.html#page/Tegra%20Linux%20Driver%20Package%20Development%20Guide/AppendixTegraStats.html)
 
 ## So the basic workflow is:
 
-### Generate the logs:
+### 1. Generate the logs:
 
 `tegrastats tegrastats --interval 10000 --logfile /var/log/tegrastat`
 
-### Read the logs with telegraf input.tail plugin:
+### 2. Read the logs with telegraf input.tail plugin:
 
 Excerpt from `/etc/telegraf/telegraf.conf`
 ```
@@ -32,7 +32,9 @@ CUSTOM_LOGS %{NUMBER:ramused:int}/%{NUMBER:ramtotal:int}MB \(lfb %{NUMBER:pages:
 '''
 ```
 
-### Then you can of course graph them, set alarms, etc. as usual.
+In my case I have an output plugin [[outputs.influxdb]] which send the data to my influx instance.
+
+### 3. Then you can of course graph them, set alarms, etc. as usual.
 
 ![Jetson Xavier Temperatures](https://github.com/guillebot/grafana-tegrastats-telegraf/raw/main/grafana-xavier.png "Jetson Xavier Temperatures monitoring")
 
