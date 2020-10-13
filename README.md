@@ -34,7 +34,7 @@ CUSTOM_LOGS %{NUMBER:ramused:int}/%{NUMBER:ramtotal:int}MB \(lfb %{NUMBER:pages:
 
 ### Then you can of course graph them, set alarms, etc. as usual.
 
-![alt text](https://github.com/guillebot/grafana-tegrastats-telegraf/grafana-xavier.png "Jetson Xavier Temperatures monitoring")
+![Jetson Xavier Temperatures](https://github.com/guillebot/grafana-tegrastats-telegraf/raw/main/grafana-xavier.png "Jetson Xavier Temperatures monitoring")
 
 
 
