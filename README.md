@@ -1,4 +1,4 @@
-# Tegrastats Telegraf Influxdb Grafana
+# Tegrastats -> Telegraf -> Influxdb -> Grafana
 
 I'm developing a series of AI devices Nvidia Jetson based.
 
