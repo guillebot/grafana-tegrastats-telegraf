@@ -40,8 +40,7 @@ In my case I have an output plugin [[outputs.influxdb]] which send the data to m
 
 ### 4. Attached you will se my grafana panel configuration
 
-```
-
+```nvidia jetson-dashboard.json```
 
 ## Notes:
 
