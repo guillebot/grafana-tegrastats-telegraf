@@ -12,7 +12,7 @@ For the most part I use [This beautiful](https://grafana.com/grafana/dashboards/
 
 `tegrastats tegrastats --interval 10000 --logfile /var/log/tegrastat`
 
-### 2. Read the logs with telegraf input.tail plugin:
+### 2. Parse the logs with telegraf input.tail plugin:
 
 Excerpt from `/etc/telegraf/telegraf.conf`
 ```
