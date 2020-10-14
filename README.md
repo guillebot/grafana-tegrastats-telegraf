@@ -40,7 +40,7 @@ In my case I have an output plugin [[outputs.influxdb]] which send the data to m
 
 ### 4. Attached you will se my grafana panel configuration
 
-(Nvidia Jetson Grafana Dashboard)[https://github.com/guillebot/grafana-tegrastats-telegraf/blob/main/Nvidia%20Jetson-dashboard.json]
+[Nvidia Jetson Grafana Dashboard](https://github.com/guillebot/grafana-tegrastats-telegraf/blob/main/Nvidia%20Jetson-dashboard.json)
 
 ## Notes:
 
