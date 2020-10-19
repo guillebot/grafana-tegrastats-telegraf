@@ -12,7 +12,7 @@ For the most part I use [This beautiful](https://grafana.com/grafana/dashboards/
 
 `tegrastats tegrastats --interval 10000 --logfile /var/log/tegrastat`
 
-### 2. Parse the logs with telegraf input.tail plugin:
+### 2. Parse the logs with telegraf inputs.tail plugin:
 
 Excerpt from `/etc/telegraf/telegraf.conf`
 ```
@@ -32,7 +32,7 @@ CUSTOM_LOGS %{NUMBER:ramused:int}/%{NUMBER:ramtotal:int}MB \(lfb %{NUMBER:pages:
 '''
 ```
 
-In my case I have an output plugin [[outputs.influxdb]] which send the data to my influx instance.
+In my case I have an output plugin [[outputs.influxdb]] which sends the data to my influx instance.
 
 ### 3. Then you can of course graph them, set alarms, etc. as usual.
 
