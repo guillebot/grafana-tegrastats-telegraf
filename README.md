@@ -38,7 +38,7 @@ In my case I have an output plugin [[outputs.influxdb]] which sends the data to 
 
 ![Jetson Xavier Temperatures](https://github.com/guillebot/grafana-tegrastats-telegraf/raw/main/grafana-xavier.png "Jetson Xavier Temperatures monitoring")
 
-### 4. Attached you will se my grafana panel configuration
+### 4. See attached my grafana panel configuration
 
 [Nvidia Jetson Grafana Dashboard](https://github.com/guillebot/grafana-tegrastats-telegraf/blob/main/Nvidia%20Jetson-dashboard.json)
 
